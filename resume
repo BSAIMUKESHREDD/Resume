@@ -1,0 +1,329 @@
+%-------------------------
+% Resume in Latex
+% Author : Arkadeep Das, Manas Daruka, Ayush Sharma, Abhinav Gupta
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\definecolor{headingColor}{RGB}{0,103,149}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{B SAI MUKESH REDDY} % Your Name
+\newcommand{\course}{MTech - Chemical Engineering } % Your Course
+\newcommand{\roll}{224107002} % Your Roll No.
+\newcommand{\phone}{7075570330} % Your Phone Number
+\newcommand{\emaila}{bsaimukeshreddy820@gmail.com} %Email 1
+\newcommand{\emailb}{bsm.reddy@iitg.ac.in} %Email 2
+\newcommand{\github}{/BSAIMUKESHREDD} %Github
+\newcommand{\website}{https://example.com} %Website
+\newcommand{\linkedin}{bsaimukeshreddy/} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+
+\includegraphics[width=2cm,clip]{iitg_logo.jpg}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone \hspace{0.5 mm} \includegraphics[width=0.3 cm,height=0.25 cm,clip]{OIP.jpeg}\\ 
+  {Roll No.:\roll} & \href{mailto:\emaila}{\emaila  \hspace{0.5 mm} \includegraphics[width=0.3 cm,height=0.25 cm,clip]{jik.png}}   \\
+  \course &  \href{mailto:\emailb}{\emailb   \hspace{0.5 mm} \includegraphics[width=0.3 cm,height=0.25 cm,clip]{HU.PNG}}   \\
+  {Specialization in Material Science and Technology} &  \href{https://github.com/\github}{GitHub  \hspace{0.5 mm} \includegraphics[width=0.3 cm,height=0.25 cm,clip]{github.png}}   \\
+  {Indian Institute Of Technology, Guwahati} & \href{https://www.linkedin.com/in/\linkedin/}{LinkedIn \hspace{0.5 mm} \includegraphics[width=0.3 cm,height=0.25 cm,clip]{pxatutj9.png}} 
+\end{tabularx}
+}
+
+
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Indian Institute of Technology Guwahati}{Guwahati, India}
+%       {Bachelor of Technology in Mathematics and Computing ;  GPA: 8.10}{July. 2015 -- July. 2019 (Expected)}
+%     \resumeSubheading
+%       {Burdwan Model School}{Burdwan, W.B}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
+%   \resumeSubHeadingListEnd\vspace{-3mm}
+
+\section{\textcolor{headingColor} {Education}}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+ \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  M.Tech.  & Indian Institute of Technology, Guwahati & 9.17 (Current) & 2022-Present\\
+  \hline
+  B.Tech.  & Jawaharlal Nehru Technological University Anantapur & 7.92  & 2017-2021\\ %Optional
+  \hline
+  Senior Secondary & Andhra Pradesh State Board & 97\%\  & 2017 \\
+  \hline
+  Secondary & Andhra Pradesh State Board& 9.70 & 2015 \\
+  \hline
+\end{tabularx}}
+\vspace{-2mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textcolor{headingColor} {Experience}}
+  \resumeSubHeadingListStart
+
+
+    
+     \resumeSubheading
+     {Teaching Assistant}{Guwahati, India}
+      {Assisting  students through dedicated support and engagement as Teaching Assistant } {July 2022 - ongoing}
+       \resumeItemListStart
+                \item { Computer Aided 
+     Numerical Methods, Heat Transfer Lab, Thermodynamics, AI \& ML in Chemical Engineering.}
+     
+     \resumeItemListEnd
+     
+     
+     \resumeSubheading
+      {Accenture}{Bangalore, India}
+      {Full Stack Engineering Analyst}{Sep 2021 - Jul 2022}
+      \resumeItemListStart
+  
+     \item {Worked as a Java developer, building web applications and improving coding abilities to provide valuable solutions. } 
+    \resumeItemListEnd    
+  
+\resumeSubHeadingListEnd
+     
+ 
+    % \item {More work done } .....
+
+  
+\vspace{-6.5mm}
+%-----------PROJECTS-----------------
+
+\section{\textcolor{headingColor} {Projects}}
+\resumeSubHeadingListStart
+ 
+ 
+
+ 
+    
+    \resumeProject
+      {Process Modeling, Simulation and Optimization of Vacuum Membrane Distillation }
+ %Project Name
+      {M.Tech Thesis, Dr. Senthilmurugan Subbiah, Professor, Dept of Chemical Engg, IIT Guwahati} %Project Name, Location Name
+      {Ongoing} %Event Dates
+      {\href{https://github.com/BSAIMUKESHREDD/ProcessModellingSimulationandOptimizationOfVMD}{Link}} %Website
+      \resumeItemListStart
+       \item{\textbf{Objective}  : Techno-Economic analysis for extracting volatile organic components (VOC) from aqueous solutions.}
+       \item{\textbf{Material Characterization}  : Goniometer, Tensiometer, Rheometer, AAS, Gas Chromatography }
+        \item {\textbf{VMD Modeling \& Optimization} : Employed Dymola to model and calibrate Vacuum Membrane Distillation (VMD), optimizing key variables like pressure, flow, temperature, and concentration for process efficiency.}
+        \item{\textbf{Energy Efficiency Enhancement} : Successfully integrated a heat pump, substantially lowering energy consumption. Achieved higher Gained Output Ratio (GOR) and reduced SHEC, enhancing overall process sustainability.}
+         
+    \resumeItemListEnd
+
+
+
+    \resumeProject
+      {Development of Low Cost Multi-Parametric Sensor for Water Quality Monitoring}
+      {Course Work Project, Dr. Senthilmurugan Subbiah, Professor, Dept of Chemical Engg, IIT Guwahati} %Project Name, Location Name
+      {Jul 2022 - Nov 2022} %Event Dates
+    {\href{https://github.com/BSAIMUKESHREDD/SensorData.git}{Link}} %Website
+      \resumeItemListStart
+                \item {Collaborated with project team for preprocessing raw data and extracting significant features from noisy data.}
+\item{Engaged in the  model development calibration testing and validation for estimating active chlorine and PH.}
+       
+\resumeItemListEnd
+    
+    \resumeProject
+      {Design Simulation Optimization and Experimentation of Shell and Tube Heat Exchanger}
+ %Project Name
+      {B.Tech Thesis, Dr.Lt.S Sharada, Associate Professor, Dept of Chemical Engg, JNTUA } %Project Name, Location Name
+      {Jan 2021 - Jul 2021} %Event Dates
+   
+      \resumeItemListStart
+               \item {Conducted a comprehensive study to understand the dynamics of shell-and-tube heat exchanger. }
+               \item{The study demonstrated successful application of the developed mathematical model using MATLAB by validating against the experimental data to check for accuracy and model calibration.}
+             %   \item {The genetic algorithm has proved to be a robust optimization tool in varying design parameters.}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-6.5mm}
+
+\section{\textcolor{headingColor} {Skills}}
+
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming} % Category  
+  { Java, Python, MATLAB, Modelica}
+ \resumeSubItem{Miscellaneous} % Category
+  { DYMOLA, Simulink, ASPEN Plus*, OpenFOAM*}
+\resumeSubItem{Optimization Software} % Category
+  { IBM ILOG CPLEX Optimization Studio*}
+     \resumeSubItem{Soft Skills} % Category
+    { Leadership, Communication, Adaptability, Problem-solving, Team Player} % Skills
+%  \resumeSubItem{Operating Systems}
+%  {Windows, Linux*} 
+\hfill \textit{\footnotesize{* Elementary proficiency}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+
+\vspace{-.5mm}
+\section{\textcolor{headingColor} {Key courses }}
+\resumeHeadingSkillStart
+ \resumeSubItem{Chemical Engineering} % Category
+    { Fluid Mechanics, Mass Transfer, Advance Process Control, Reaction Engineering}
+   \resumeSubItem{Material Science}{  Characterization of Materials, Smart Materials, Fundamentals of Material Science } 
+    
+\resumeSubItem{NPTEL}{ Material and Energy balances, Matlab Programming for Numerical Computation, Stress Management }
+\resumeSubItem{Data Science}
+ { Time Series Analysis (C\&A), Machine Learning (Coursera|Stanford University)}
+\resumeSubItem{Mathematics} 
+ { Optimization Techniques, Computer Aided Numerical Methods, Design \& Analysis of Experiments }
+ 
+%  \resumeSubItem{Electrical and Electronics} % Category
+%     {Advanced Control Systems, Digital Systems, Microprocessors} % Skills
+ \resumeHeadingSkillEnd
+
+\vspace{-4.5mm}
+\section{\textcolor{headingColor} {Extracurricular}}
+
+
+ \resumeHeadingSkillStart
+
+ \item{\hspace{1mm}Participated in Paper Presentation in NIT Warangal for Technozion 2018}\vspace{-2mm} 
+ \item{\hspace{1mm}Runners in handball for Sports Day 2019 in JNTUA}\vspace{-2mm}
+\item{\hspace{1mm}Completed Internship Training Program at Godavari Gas Power Plant Jegurupadu Andhra Pradesh 2019}\vspace{-2mm}
+\item{\hspace{1mm}Attended workshop on Heat exchanger design using HTRI at NIT Trichy 2019}\vspace{-2mm}
+
+\item {\hspace{0mm} Successfully passed the online quiz CHEMstorm conducted by OUCT as a part of IIChE 2020}\vspace{-2mm}
+
+%\item {\hspace{1mm}Attended workshop on Engineering interventions to combat COVID-19 Pandemic in JNTUA 2020}
+\item {\hspace{1mm}Participated in Optimization contest by EXERGY IIT Kanpur 2023}\vspace{-2mm}
+\item{\hspace{1mm}Peer mentor for mentoring M.Tech first-year students by Saathi Club 2023}\vspace{-2mm}
+\resumeHeadingSkillEnd
+
+
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+
+
+%-------------------------------------------
+\end{document}
